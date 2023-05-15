@@ -1,0 +1,333 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: solid red 1px; */
+  font-family: "Raleway", sans-serif;
+  /* overflow-x: hidden; */
+}
+
+html,
+body {
+  background: rgb(12, 9, 71);
+  background: linear-gradient(90deg, #0c0947 0%, #710979 49%, #4600ff 98%);
+  color: #fff;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+/* prueba */
+
+.login-box {
+  position: relative;
+  top: 20%;
+  left: 50%;
+  width: 600px;
+  padding: 40px;
+  transform: translate(-50%, -20%);
+  background: rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+
+.login-box h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.login-box .user-box {
+  position: relative;
+}
+
+.login-box .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+  margin-top: 30px;
+  font-family: "Raleway", sans-serif;
+}
+
+.login-box .user-box label {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.login-box .user-box input:hover ~ label,
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+  top: -10px;
+  left: 0;
+  color: #03e9f4;
+  font-size: 12px;
+}
+
+.login-box form a {
+  position: relative;
+  display: flex;
+  width: 50%;
+  margin-left: 25%;
+  justify-content: center;
+  padding: 10px 20px;
+  color: #03e9f4;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  letter-spacing: 4px;
+}
+
+.login-box a:hover {
+  background: #03e8f4a7;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
+    0 0 100px #03e9f4;
+}
+
+.login-box a span {
+  position: absolute;
+  display: block;
+}
+
+.login-box a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #710979);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+.login-box a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #710979);
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+.login-box a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #4600ff);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+.login-box a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #4600ff);
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+
+.info {
+  text-align: center;
+  margin-top: -15px;
+}
+
+.info2 {
+  text-align: center;
+  margin-top: -15px;
+}
+
+#movieTitle {
+  margin: 20px 0px 10px 0px;
+}
+
+#movieOverview {
+  text-align: left;
+  margin-top: 10px;
+}
+
+.gridContent {
+  display: flex;
+  align-items: center;
+}
+
+#releaseDate {
+  position: relative;
+  top: 15px;
+  right: 44%;
+}
+
+#voteAverage {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.flechaIz {
+  position: absolute;
+  left: 15%;
+  top: 45%;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.flechaD {
+  position: absolute;
+  right: 15%;
+  top: 45%;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.noData {
+  margin-top: 20px;
+  font-size: 2rem;
+}
+
+/* prueba media */
+
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 600px) {
+  .login-box {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    transform: translate(-60%, -20%);
+  }
+  .login-box h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .login-box .user-box input {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .login-box .user-box label {
+    font-size: 14px;
+  }
+  .login-box form a {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  #releaseDate {
+    position: relative;
+    top: 15px;
+    right: 40%;
+  }
+
+  .flechaIz {
+    left: 5%;
+    cursor: pointer;
+    background-color: transparent;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .flechaD {
+    right: 5%;
+    cursor: pointer;
+    background-color: transparent;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+/* Estilos para tabletas */
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  .login-box {
+    width: 80%;
+    padding: 30px;
+    transform: translate(-50%, -20%);
+  }
+  .login-box h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+  .login-box .user-box input {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  .login-box .user-box label {
+    font-size: 18px;
+  }
+  .login-box form a {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  #releaseDate {
+    position: relative;
+    top: 15px;
+    right: 42%;
+  }
+
+  .flechaIz {
+    left: 20%;
+  }
+
+  .flechaD {
+    right: 20%;
+  }
+}
